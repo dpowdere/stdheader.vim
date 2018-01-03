@@ -13,7 +13,7 @@ Stdheader is vim script that create header in file:
 	# **************************************************************************** #
 
 
-# Installation
+## Installation
 ### Vundle
 Place this in your .vimrc:
 	
@@ -23,9 +23,10 @@ then run the following in Vim:
 
     	:source %
     	:PluginInstall
-Also,  set your '$USER' and '$MAIL' shell variables.
 
-# Using Stdheader
+Also, set your '$USER' and '$MAIL' shell variables.
+
+## Using Stdheader
 When file open, use command:
 
     	:Stdheader
