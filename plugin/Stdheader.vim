@@ -6,7 +6,7 @@
 "    By: dfedorov <dfedorov@student.unit.ua>        +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2018/01/03 17:23:25 by dfedorov          #+#    #+#              "
-"    Updated: 2018/01/03 17:23:31 by dfedorov         ###   ########.fr        "
+"    Updated: 2018/09/29 16:21:39 by tvallee          ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -47,7 +47,7 @@ let s:styles = [
 			\'start': '"', 'end': '"', 'fill': '*'
 			\},
 			\{
-			\'extensions': ['\.el$', '\.emacs$', '\.myemacs$'],
+			\'extensions': ['\.el$', '\.emacs$', '\.myemacs$', '\.s$'],
 			\'start': ';', 'end': ';', 'fill': '*'
 			\}
 			\]
