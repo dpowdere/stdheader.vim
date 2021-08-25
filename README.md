@@ -1,4 +1,4 @@
-Stdheader is a vim script that prepends the standard header to a file
+Stdheader is a vim script that prepends the [standard header][42] to a file
 according to Ecole 42 requirements:
 
     # **************************************************************************** #
@@ -13,9 +13,8 @@ according to Ecole 42 requirements:
     #                                                                              #
     # **************************************************************************** #
 
+## Installation with Vundle
 
-## Installation
-### Vundle
 Place this in your `.vimrc`:
 
 	Plugin 'dpowdere/stdheader.vim'
@@ -30,3 +29,5 @@ Also, set your `$USER` and `$MAIL` shell variables.
 ## Using Stdheader
 Use command `:Stdhdr` to add header into a file and `:StdhdrReplace` to
 completely replace an existing header.
+
+[42]: https://github.com/42Paris/42header
