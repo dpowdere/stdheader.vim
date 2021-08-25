@@ -188,5 +188,6 @@ function s:update ()
 endfunction
 
 command Stdhdr call s:insert ()
+command StdhdrReplace 1,12d | call s:insert ()
 nmap <F1> :Stdheader<CR>
 autocmd BufWritePre * call s:update ()
