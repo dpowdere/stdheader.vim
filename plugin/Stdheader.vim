@@ -6,7 +6,7 @@
 "    By: dfedorov <dfedorov@student.unit.ua>        +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2018/01/03 17:23:25 by dfedorov          #+#    #+#              "
-"    Updated: 2018/09/29 16:21:39 by tvallee          ###   ########.fr        "
+"    Updated: 2020/10/31 01:29:04 by dpowdere         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -43,7 +43,7 @@ let s:styles = [
 			\'start': '(*', 'end': '*)', 'fill': '*'
 			\},
 			\{
-			\'extensions': ['\.vim$', 'vimrc$', '\.myvimrc$', 'vimrc$'],
+			\'extensions': ['\.vim$', '.vimrc$', '\.myvimrc$', 'vimrc$'],
 			\'start': '"', 'end': '"', 'fill': '*'
 			\},
 			\{
@@ -54,6 +54,7 @@ let s:styles = [
 
 let s:linelen		= 80
 let s:marginlen		= 5
+let s:extralen		= 4
 let s:contentlen	= s:linelen - (3 * s:marginlen - 1) - strlen(s:asciiart[0])
 
 function s:trimlogin ()
@@ -65,7 +66,7 @@ function s:trimlogin ()
 endfunction
 
 function s:trimemail ()
-	let l:trimemail = strpart($MAIL, 0, s:contentlen - 16)
+	let l:trimemail = strpart($MAIL, 0, s:contentlen + s:extralen - 16)
 	if strlen(l:trimemail) == 0
 		let l:trimemail = "marvin@42.fr"
 	endif
@@ -115,7 +116,7 @@ endfunction
 
 function s:coderline ()
 	let l:contentline = "By: ". s:trimlogin () . ' <' . s:trimemail () . '>'
-	return s:left() . l:contentline . repeat(' ', s:contentlen - strlen(l:contentline)) . s:midgap() . s:asciiart[3] . s:right()
+	return s:left() . l:contentline . repeat(' ', s:contentlen + s:extralen - strlen(l:contentline)) . repeat(' ', s:marginlen - s:extralen - 1) . s:asciiart[3] . s:right()
 endfunction
 
 function s:logo3 ()
